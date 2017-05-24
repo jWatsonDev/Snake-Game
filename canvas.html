@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <style>
+      canvas {
+        border: 1px solid #000; 
+      }
+    </style>
+  </head>
+  <body onload="init();">
+    <canvas id="myCanvas" width="400" height="150"></canvas>
+    <script>
+      var c;
+      var ctx; 
+      
+      function init() {
+        c = document.getElementById("myCanvas");
+        ctx = c.getContext('2d'); 
+        draw(); 
+      }
+      function draw() {
+        ctx.fillStyle = "#ff0000";
+        ctx.fillRect(30, 30, 50, 50); 
+        ctx.strokeStyle = "#000"; 
+        ctx.lineWidth = 3; 
+        ctx.strokeRect(30, 30, 50, 50);
+        
+        ctx.fillStyle = "#000";
+        ctx.fillRect(40, 40, 50, 50);
+
+        			//Draw Text
+			ctx.font = '30pt Arial';
+			//Create Gradient
+			var gradient = ctx.createLinearGradient(0,0,c.width,0);
+			gradient.addColorStop("0","red");
+			gradient.addColorStop("1","black");
+			//Fill Text With Gradient
+			ctx.fillStyle=gradient;
+			ctx.fillText("My Company",100,80);
+			
+			//Define Line
+			ctx.strokeStyle = "#000000";
+			ctx.fillStyle = "#ff0000";
+			ctx.lineWidth = 2;
+			
+			ctx.beginPath();
+			ctx.moveTo(90,90);
+			ctx.lineTo(350,90);
+			ctx.stroke();
+			ctx.closePath();
+      }
+      
+    </script>
+  </body>
+</html>

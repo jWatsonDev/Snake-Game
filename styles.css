@@ -1,0 +1,58 @@
+body {
+  background: rgb(0,0,0); 
+}
+a {
+  color: #fff;
+  text-decoration: none; 
+}
+canvas {
+
+}
+.container {
+  position: relative; 
+  margin: 30px auto 0 auto; 
+  width: 602px; 
+  overflow: auto; 
+}
+#stats {
+  margin: auto;
+  width: 590px; 
+  background: grey; 
+  padding: 5px; 
+  font-size: 20px; 
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px; 
+  overflow: auto;
+}
+.score {
+  width: 25%; 
+  height: 50px; 
+  padding-top: 20px; 
+  float: left; 
+  margin-right: 5px; 
+  overflow: auto;
+  background: black; 
+  text-align: center;
+}
+#reset_score {
+  padding: 10px; 
+  float: right; 
+}
+#overlay {
+  display: none;
+  color: #fff;
+  position: absolute; 
+  text-align: center; 
+  top: 170px; 
+  left: 180px; 
+}
+#overlay a {
+  display: block; 
+  margin: 10px; 
+  padding: 10px; 
+  background: #666666;
+}
+#overlay a:hover {
+  background: orange; 
+}
